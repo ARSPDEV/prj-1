@@ -5,10 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:'Courier New', Courier, monospace;
+        }
         .bg-blue{
             background-color: rgb(76, 76, 230);
             color: #ffffff;
             padding:1rem;
+            border-radius:0.5rem;
+            margin-bottom:10px;
+        }
+        .form-container{
+            width:100%;
+            height:100vh;
+            background: #aebce4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius:0.5rem;
+        }
+        .form-container .login-form{
+            width:100%;
+            max-width:600px;
+            background-color: #ffffff;
+            border-radius:0.5rem;
+            padding:0.5rem;
+        }
+        .login-form form{
+            display: flex;
+            flex-direction: column;
+            gap:0.5rem;
+            padding:1rem;
+        }
+        .login-form form input{
+            height:40px;
+            border-radius:0.5rem;
+            padding:0.3rem;
+            border:1px solid #abcaab;
+            outline: none;
+        }
+        .login-form [type='submit']{
+            background-color: rgb(18, 29, 126);
+            color: #fff;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -18,5 +63,14 @@
             First HTML Project
         </h1>
     </div>
+   <div class="form-container">
+     <div class="login-form">
+        <form action="">
+            <input type="text" placeholder="UserName">
+            <input type="text" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+   </div>
 </body>
 </html>
